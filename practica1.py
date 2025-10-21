@@ -7,7 +7,7 @@ maximoDeIntentos = 5
 numeroEncontrado = False
 
 print("Bienvenidos al juego")
-print("Debe adivinar el número que va desde 1 al 50")
+print("Debe adivinar el número secreto en el rango de 1 al 50")
 print(f"Tenés un máximo de {maximoDeIntentos} intentos.\n")
 
 while cantidadDeIntentos < maximoDeIntentos and not numeroEncontrado:
@@ -19,14 +19,18 @@ while cantidadDeIntentos < maximoDeIntentos and not numeroEncontrado:
 
         if numero == numero_secreto:
             print(f"Adivinaste el número secreto en el intento {cantidadDeIntentos}")
+            print("¡Felicitaciones! ¡Ganaste el juego!")
             numeroEncontrado = True
         elif numero < numero_secreto:
             print("El número secreto es MAYOR.")
         else:
             print("El número secreto es MENOR.")
 
-        print("Intentos restantes:", maximoDeIntentos - cantidadDeIntentos)
-        print() 
+        
+        if not numeroEncontrado:
+            print(f"Intentos restantes: {maximoDeIntentos-cantidadDeIntentos}")
+
+        print()    
 
     else:
         print("Error: el número válido es entre 1 y 50.\n")
