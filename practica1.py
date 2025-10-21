@@ -7,7 +7,7 @@ maximoDeIntentos = 5
 numeroEncontrado = False
 
 print("Bienvenidos al juego")
-print("Debe adivinar el número secreto en el rango de 1 al 50")
+print("Debes adivinar el número secreto en el rango de 1 al 50")
 print(f"Tenés un máximo de {maximoDeIntentos} intentos.\n")
 
 while cantidadDeIntentos < maximoDeIntentos and not numeroEncontrado:
